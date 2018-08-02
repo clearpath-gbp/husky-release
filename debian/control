@@ -1,0 +1,12 @@
+Source: ros-kinetic-husky-navigation
+Section: misc
+Priority: extra
+Maintainer: Paul Bovbel <paul@bovbel.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-roslaunch
+Homepage: http://ros.org/wiki/husky_navigation
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-husky-navigation
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-amcl, ros-kinetic-base-local-planner, ros-kinetic-dwa-local-planner, ros-kinetic-frontier-exploration, ros-kinetic-gmapping, ros-kinetic-map-server, ros-kinetic-move-base, ros-kinetic-navfn
+Description: Autonomous mapping and navigation demos for the Clearpath Husky
