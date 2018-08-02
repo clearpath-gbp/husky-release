@@ -2,6 +2,9 @@
 Changelog for package husky_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.1 (2018-08-02)
+------------------
+
 0.3.0 (2018-04-11)
 ------------------
 * Remove defunct email address
