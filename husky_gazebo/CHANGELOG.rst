@@ -2,6 +2,9 @@
 Changelog for package husky_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.3 (2019-04-18)
+------------------
+
 0.3.2 (2019-03-25)
 ------------------
 * Added Z to spawn husky launch
