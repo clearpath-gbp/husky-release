@@ -1,0 +1,107 @@
+ros-kinetic-husky-viz (0.3.4-1xenial) xenial; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.3.3-1xenial) xenial; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 18 Apr 2019 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.3.2-1xenial) xenial; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 25 Mar 2019 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.3.1-1xenial) xenial; urgency=high
+
+  * Updated dependencies for robot_state_publisher
+  * Updated view_model.launch to include a robot_state_publisher since it was moved to control.launch
+  * Contributors: Dave Niewinski
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 02 Aug 2018 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.3.0-1xenial) xenial; urgency=high
+
+  * Updated all package versions to 0.2.6.
+  * Fixed typo in URLs.
+  * Remove defunct email address
+  * Updated maintainers.
+  * Update URDF for multirobot
+  * Move packages into monorepo for kinetic; strip out ur packages
+  * Contributors: Paul Bovbel, Tony Baltovski
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 11 Apr 2018 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.2.2-1xenial) xenial; urgency=high
+
+  * Toggle viz settings
+  * Integrate husky_customization workflow
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 08 Apr 2015 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.2.1-1xenial) xenial; urgency=high
+
+  * Update robot visualization
+  * Enable arm visualization by default
+  * Fix package urls
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.2.0-1xenial) xenial; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.1.1-1xenial) xenial; urgency=high
+
+  * Update authors and web
+  * Add IMU viz dependency; Update rviz presets
+  * Restore interactive marker
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Fri, 06 Feb 2015 05:00:00 -0000
+
+ros-kinetic-husky-viz (0.1.0-1xenial) xenial; urgency=high
+
+  * Update visualizations for indigo release
+  * update maintainer and dependencies
+  * Remove husky_interactive_markers, switch to generic.
+  * Add front_laser arg to view_model launcher.
+  * Default fixed frame for the model viewer should be base_link.
+  * viewing more options for navigation.rviz
+  * Contributors: Mike Purvis, Paul Bovbel, Prasenjit Mukherjee
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 14 Jan 2015 05:00:00 -0000
+
+ros-kinetic-husky-viz (0.0.3-1xenial) xenial; urgency=high
+
+  * Set version requirement for description pkg.
+  * Navigation view launch file and rviz file
+
+ -- Paul Bovbel <paul@bovbel.com>  Fri, 04 Oct 2013 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.0.2-1xenial) xenial; urgency=high
+
+  * Add interactive_markers pkg to dependencies.
+  * Add rviz files and launch files for view_robot (odom view + interactive marker control)
+  * Add roslaunch file check.
+
+ -- Paul Bovbel <paul@bovbel.com>  Sun, 29 Sep 2013 04:00:00 -0000
+
+ros-kinetic-husky-viz (0.0.1-1xenial) xenial; urgency=high
+
+  * Working view_model.launch.
+  * Catkinize package, add install targets.
+  * Split off separate husky_viz package.
+  * Move models directory up to root
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 11 Sep 2013 04:00:00 -0000
+
+
