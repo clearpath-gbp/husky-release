@@ -2,6 +2,11 @@
 Changelog for package husky_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.4 (2019-08-01)
+------------------
+* Properly support GX5.
+* Contributors: Dave Niewinski
+
 0.3.3 (2019-04-18)
 ------------------
 
