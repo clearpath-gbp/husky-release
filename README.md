@@ -1,3 +1,37 @@
+## husky (melodic) - 0.4.0-1
+
+The packages in the `husky` repository were released into the `melodic` distro by running `/usr/bin/bloom-release -r melodic -t melodic husky` on `Mon, 05 Aug 2019 07:07:20 -0000`
+
+These packages were released:
+- `husky_base`
+- `husky_bringup`
+- `husky_control`
+- `husky_description`
+- `husky_desktop`
+- `husky_gazebo`
+- `husky_msgs`
+- `husky_navigation`
+- `husky_robot`
+- `husky_simulator`
+- `husky_viz`
+
+Version of package(s) in repository `husky`:
+
+- upstream repository: https://github.com/husky/husky.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.4.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.8.0`
+- catkin_pkg version: `0.4.13`
+- rosdep version: `0.15.2`
+- rosdistro version: `0.7.4`
+- vcstools version: `0.1.40`
+
+
 ## husky (kinetic) - 0.3.4-1
 
 The packages in the `husky` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release -r kinetic -t kinetic husky` on `Thu, 01 Aug 2019 18:48:57 -0000`
