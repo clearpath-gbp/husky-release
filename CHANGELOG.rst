@@ -2,6 +2,9 @@
 Changelog for package husky_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.1 (2019-09-30)
+------------------
+
 0.4.0 (2019-08-01)
 ------------------
 * Removed frontier_exploration temporarily for Melodic.
