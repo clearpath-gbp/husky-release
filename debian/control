@@ -1,0 +1,12 @@
+Source: ros-kinetic-husky-viz
+Section: misc
+Priority: optional
+Maintainer: Paul Bovbel <paul@bovbel.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-roslaunch
+Homepage: http://ros.org/wiki/husky_viz
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-husky-viz
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-husky-description, ros-kinetic-joint-state-publisher, ros-kinetic-robot-state-publisher, ros-kinetic-rviz, ros-kinetic-rviz-imu-plugin
+Description: Visualization configuration for Clearpath Husky
