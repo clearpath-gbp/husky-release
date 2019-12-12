@@ -1,0 +1,12 @@
+Source: ros-kinetic-husky-bringup
+Section: misc
+Priority: optional
+Maintainer: Paul Bovbel <paul@bovbel.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-roslaunch
+Homepage: http://ros.org/wiki/husky_bringup
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-husky-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-scipy, ros-kinetic-husky-base, ros-kinetic-husky-control, ros-kinetic-husky-description, ros-kinetic-imu-filter-madgwick, ros-kinetic-imu-transformer, ros-kinetic-lms1xx, ros-kinetic-microstrain-3dmgx2-imu, ros-kinetic-microstrain-mips, ros-kinetic-nmea-comms, ros-kinetic-nmea-navsat-driver, ros-kinetic-robot-localization, ros-kinetic-robot-upstart, ros-kinetic-tf, ros-kinetic-tf2-ros, ros-kinetic-um6, ros-kinetic-um7
+Description: Clearpath Husky installation and integration package
