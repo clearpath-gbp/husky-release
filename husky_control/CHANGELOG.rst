@@ -2,6 +2,11 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.3.5 (2019-12-11)
+------------------
+* Added envar for joy device.
+* Contributors: Dave Niewinski, Tony Baltovski
+
 0.3.4 (2019-08-01)
 ------------------
 
