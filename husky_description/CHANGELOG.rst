@@ -2,6 +2,11 @@
 Changelog for package husky_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.3 (2020-04-20)
+------------------
+* Fixed GazeboRosControlPlugin missing error
+* Contributors: lerolynn
+
 0.4.2 (2019-12-11)
 ------------------
 
