@@ -2,12 +2,19 @@
 Changelog for package husky_viz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.3.6 (2020-04-20)
+0.4.3 (2020-04-20)
 ------------------
-* Add the joint_state_publisher_gui dependency
-* Contributors: Chris I-B
+* [husky_viz] Removed joint_state_publisher since joint_state_publisher_gui is generating the same data.
+* Fix a deprecation warning about the joint state publisher's gui
+* Contributors: Chris Iverach-Brereton, Tony Baltovski
 
-0.3.5 (2019-12-11)
+0.4.2 (2019-12-11)
+------------------
+
+0.4.1 (2019-09-30)
+------------------
+
+0.4.0 (2019-08-01)
 ------------------
 
 0.3.4 (2019-08-01)
