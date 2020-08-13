@@ -2,6 +2,11 @@
 Changelog for package husky_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.4 (2020-08-13)
+------------------
+* Removed Paul Bovbel as maintainer.
+* Contributors: Tony Baltovski
+
 0.4.3 (2020-04-20)
 ------------------
 
