@@ -4,12 +4,14 @@
   <arg name="multimaster" default="$(optenv ROBOT_MULTIMASTER false)"/>
   <arg name="simulation" default="$(optenv ROBOT_SIMULATION false)"/>
   <arg name="robot_namespace" default="$(optenv ROBOT_NAMESPACE robot)"/>
+  <arg name="enable_ekf" default="$(optenv ENABLE_EKF true)"/>
 
   <arg name="config_extras"
        default="$(eval optenv('HUSKY_CONFIG_EXTRAS', find('husky_control') + '/config/empty.yaml'))"/>
 
   <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED false)"/>
   <arg name="kinect_enabled" default="$(optenv HUSKY_KINECT_ENABLED false)"/>
+  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
   <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
 
   <include file="$(find multimaster_launch)/launch/multimaster_robot.launch" if="$(arg multimaster)">
@@ -23,6 +25,7 @@
   <include file="$(find husky_description)/launch/description.launch" >
     <arg name="laser_enabled" default="$(arg laser_enabled)"/>
     <arg name="kinect_enabled" default="$(arg kinect_enabled)"/>
+    <arg name="realsense_enabled" default="$(arg realsense_enabled)"/>
     <arg name="urdf_extras" default="$(arg urdf_extras)"/>
   </include>
 
@@ -34,9 +37,11 @@
         args="husky_joint_publisher husky_velocity_controller"/>
 
   <!-- Start EKF for localization -->
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
-    <rosparam command="load" file="$(find husky_control)/config/localization.yaml" />
-  </node>
+  <group if="$(arg enable_ekf)" >
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+      <rosparam command="load" file="$(find husky_control)/config/localization.yaml" />
+    </node>
+  </group>
 
   <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen"/>
 
