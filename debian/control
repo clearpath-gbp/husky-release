@@ -1,0 +1,12 @@
+Source: ros-melodic-husky-robot
+Section: misc
+Priority: optional
+Maintainer: Tony Baltovski <tbaltovski@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://ros.org/wiki/husky_robot
+Standards-Version: 3.9.2
+
+Package: ros-melodic-husky-robot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-husky-base, ros-melodic-husky-bringup
+Description: Metapackage for Clearpath Husky robot software
