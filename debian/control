@@ -1,0 +1,12 @@
+Source: ros-kinetic-husky-base
+Section: misc
+Priority: optional
+Maintainer: Paul Bovbel <paul@bovbel.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-controller-manager, ros-kinetic-diagnostic-msgs, ros-kinetic-diagnostic-updater, ros-kinetic-hardware-interface, ros-kinetic-husky-msgs, ros-kinetic-roscpp, ros-kinetic-roslaunch, ros-kinetic-roslint, ros-kinetic-sensor-msgs
+Homepage: http://ros.org/wiki/husky_base
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-husky-base
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-controller-manager, ros-kinetic-diagnostic-aggregator, ros-kinetic-diagnostic-msgs, ros-kinetic-diagnostic-updater, ros-kinetic-diff-drive-controller, ros-kinetic-geometry-msgs, ros-kinetic-hardware-interface, ros-kinetic-husky-control, ros-kinetic-husky-description, ros-kinetic-husky-msgs, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-topic-tools
+Description: Clearpath Husky robot driver
