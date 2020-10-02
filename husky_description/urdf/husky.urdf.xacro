@@ -95,7 +95,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
     <child link="base_footprint" />
   </joint>
 
-  <!-- Interial link stores the robot's inertial information -->
+  <!-- Inertial link stores the robot's inertial information -->
   <link name="inertial_link">
     <inertial>
       <mass value="46.034" />
@@ -151,10 +151,13 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 
   </xacro:if>
 
-  <!-- top sensor arch; include this if we have the realsense enabled -->
+  <!--
+    top sensor arch; include this if we have realsense enabled
+    keep this as a property to make it easier to add multiple conditions, should we need
+    the top bar for any additional sensors in the future
+  -->
   <xacro:property name="topbar_needed_realsense" value="$(arg realsense_enabled)" />
-  <!-- In melodic we can treat the above as booleans, but in kinetic they're strings, hence this ugliness... -->
-  <xacro:if value="${topbar_needed_realsense == 'true' or topbar_needed_realsense == '1'}">
+  <xacro:if value="${topbar_needed_realsense}">
     <xacro:sensor_arch prefix="" parent="top_plate_link">
       <origin xyz="-0.35 0 0.51" rpy="0 0 -3.14"/>
     </xacro:sensor_arch>
