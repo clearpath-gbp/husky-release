@@ -2,26 +2,22 @@
 Changelog for package husky_viz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.4 (2020-08-13)
+0.3.8 (2020-10-01)
 ------------------
-* Remove support for the Kinect for Xbox 360. We've had the deprecation warning around for a while, so let's finally do it.  Realsense support is in-place as a drop-in replacement that gets added to the top rollbar, just like the old Kinect would have.
-* Removed Paul Bovbel as maintainer.
+* Remove the Kinect 360 support; the deprecation warning is being treated as an error, and it's about time to remove it anyway
+* Contributors: Chris Iverach-Brereton
+
+0.3.7 (2020-08-13)
+------------------
 * Mark the Kinect for Xbox 360 as deprecated, start adding support for the Intel Realsense D400 series as a replacement
-* Contributors: Chris I-B, Chris Iverach-Brereton, Tony Baltovski
+* Contributors: Chris I-B
 
-0.4.3 (2020-04-20)
+0.3.6 (2020-04-20)
 ------------------
-* [husky_viz] Removed joint_state_publisher since joint_state_publisher_gui is generating the same data.
-* Fix a deprecation warning about the joint state publisher's gui
-* Contributors: Chris Iverach-Brereton, Tony Baltovski
+* Add the joint_state_publisher_gui dependency
+* Contributors: Chris I-B
 
-0.4.2 (2019-12-11)
-------------------
-
-0.4.1 (2019-09-30)
-------------------
-
-0.4.0 (2019-08-01)
+0.3.5 (2019-12-11)
 ------------------
 
 0.3.4 (2019-08-01)

@@ -2,32 +2,27 @@
 Changelog for package husky_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.4 (2020-08-13)
+0.3.8 (2020-10-01)
 ------------------
-* Remove support for the Kinect for Xbox 360. We've had the deprecation warning around for a while, so let's finally do it.  Realsense support is in-place as a drop-in replacement that gets added to the top rollbar, just like the old Kinect would have.
-* Changed intertial to inertial
-  fixed a minor typo
-* Removed Paul Bovbel as maintainer.
-* Fix the warnings the ROS buildfarm was giving for Melodic
+* Remove the Kinect 360 support; the deprecation warning is being treated as an error, and it's about time to remove it anyway
+* Contributors: Chris Iverach-Brereton
+
+0.3.7 (2020-08-13)
+------------------
+* Add a comment explaining why things are ugly in Kinetic
 * Add support for some environment variables to override realsense defaults
 * Use the STL from realsense2_description, rotated as necessary. Add realsense2_description to the dependencies
 * Refactor so that the sensor bar only gets added once if either the realsense OR the kinect is enabled. Adding both will still cause issues because they'll mount to the same point on the bracket, but at least the URDF won't fail.
 * Finish adding the simulated realsense to the topbar, add support for the physical realsense. Tidy up some parameters that were copied in last night but not yet configured.
 * Mark the Kinect for Xbox 360 as deprecated, start adding support for the Intel Realsense D400 series as a replacement
-* Contributors: Cedric Martens, Chris I-B, Chris Iverach-Brereton, Tony Baltovski
+* Contributors: Chris I-B
 
-0.4.3 (2020-04-20)
+0.3.6 (2020-04-20)
 ------------------
 * Fixed GazeboRosControlPlugin missing error
 * Contributors: lerolynn
 
-0.4.2 (2019-12-11)
-------------------
-
-0.4.1 (2019-09-30)
-------------------
-
-0.4.0 (2019-08-01)
+0.3.5 (2019-12-11)
 ------------------
 
 0.3.4 (2019-08-01)
