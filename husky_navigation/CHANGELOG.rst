@@ -2,6 +2,9 @@
 Changelog for package husky_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.6 (2021-03-09)
+------------------
+
 0.4.5 (2020-10-01)
 ------------------
 * Expose the scan_topic argument in amcl_demo and gmapping_demo, make them use the HUSKY_LASER_TOPIC env var as their default
