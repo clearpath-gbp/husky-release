@@ -1,0 +1,12 @@
+Source: ros-melodic-husky-control
+Section: misc
+Priority: optional
+Maintainer: Tony Baltovski <tbaltovski@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-roslaunch
+Homepage: http://ros.org/wiki/husky_control
+Standards-Version: 3.9.2
+
+Package: ros-melodic-husky-control
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-controller-manager, ros-melodic-diff-drive-controller, ros-melodic-husky-description, ros-melodic-interactive-marker-twist-server, ros-melodic-joint-state-controller, ros-melodic-joint-trajectory-controller, ros-melodic-joy, ros-melodic-multimaster-launch, ros-melodic-robot-localization, ros-melodic-robot-state-publisher, ros-melodic-rostopic, ros-melodic-teleop-twist-joy, ros-melodic-twist-mux
+Description: Clearpath Husky controller configurations
