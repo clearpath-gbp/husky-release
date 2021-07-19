@@ -2,6 +2,9 @@
 Changelog for package husky_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.10 (2021-07-18)
+-------------------
+
 0.4.9 (2021-07-15)
 ------------------
 * Fix the name of teh VLP16 launch file that gets included
