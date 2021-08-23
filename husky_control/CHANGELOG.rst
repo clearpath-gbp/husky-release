@@ -2,25 +2,11 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.10 (2021-07-18)
--------------------
-
-0.4.9 (2021-07-15)
+0.5.0 (2021-08-23)
 ------------------
-* Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
-* Contributors: Chris Iverach-Brereton
-
-0.4.8 (2021-04-01)
-------------------
-
-0.4.7 (2021-03-16)
-------------------
-
-0.4.6 (2021-03-09)
-------------------
-
-0.4.5 (2020-10-01)
-------------------
+* Disabled multimaster.
+* Add the link_name parameter to fix the interactive markers in rviz
+* Contributors: Chris Iverach-Brereton, Tony Baltovski
 
 0.4.4 (2020-08-13)
 ------------------
