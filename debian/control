@@ -1,0 +1,12 @@
+Source: ros-noetic-husky-bringup
+Section: misc
+Priority: optional
+Maintainer: Tony Baltovski <tbaltovski@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin, ros-noetic-roslaunch
+Homepage: http://ros.org/wiki/husky_bringup
+Standards-Version: 3.9.2
+
+Package: ros-noetic-husky-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-scipy, ros-noetic-husky-base, ros-noetic-husky-control, ros-noetic-husky-description, ros-noetic-imu-filter-madgwick, ros-noetic-imu-transformer, ros-noetic-lms1xx, ros-noetic-microstrain-3dmgx2-imu, ros-noetic-nmea-comms, ros-noetic-nmea-navsat-driver, ros-noetic-realsense2-camera, ros-noetic-robot-localization, ros-noetic-robot-upstart, ros-noetic-ros-mscl, ros-noetic-tf, ros-noetic-tf2-ros, ros-noetic-um6, ros-noetic-um7, ros-noetic-velodyne-pointcloud
+Description: Clearpath Husky installation and integration package
