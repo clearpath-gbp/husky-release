@@ -2,6 +2,11 @@
 Changelog for package husky_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.1 (2021-09-16)
+------------------
+* Eliminate roslint errors
+* Contributors: Lucas Walter, Tony Baltovski
+
 0.5.0 (2021-08-23)
 ------------------
 
