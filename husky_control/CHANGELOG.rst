@@ -2,17 +2,18 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.0 (2021-09-28)
+1.0.0 (2021-11-07)
 ------------------
-
-0.5.1 (2021-09-16)
-------------------
-* Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
-* Contributors: Chris Iverach-Brereton
-
-0.5.0 (2021-08-23)
-------------------
-* Disabled multimaster.
+* Initial Gazebo Classic changes.
+* [husky_control] Added basic localization config.
+* [husky_control] Disabled interactive_marker_twist_server for now.
+* Removed missing packages in ROS2.
+* [husky_control] Removed multimaster_launch.
+* [husky_control] Added teleop launch.
+* [husky_control] Update control rate to 10Hz.
+* Updates to use ros2_control.
+* [husky_control] Updated CMakeLists.txt.
+* Initial attempt at ros2_control.
 * Add the link_name parameter to fix the interactive markers in rviz
 * Contributors: Chris Iverach-Brereton, Tony Baltovski
 

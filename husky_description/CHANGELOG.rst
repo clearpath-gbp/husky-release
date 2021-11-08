@@ -2,31 +2,16 @@
 Changelog for package husky_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.0 (2021-09-28)
+1.0.0 (2021-11-07)
 ------------------
-
-0.5.1 (2021-09-16)
-------------------
-* cpr urdf extras
-* Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
-* Update intel_realsense.urdf.xacro
-  modify image format in sim to avoid log warn spam
-* Add HUSKY\_{FRONT|REAR}_BUMPER envars we can use to completely turn off the front & rear bumpers.  This is requested to make integration of the wireless charging docks easier
-* Add VLP16, secondary LMS1xx support (`#164 <https://github.com/husky/husky/issues/164>`_)
-  * Minimal refactor to add VLP16 + secondary LMS1xx support. Update defaults for the laser_enabled and realsense_enabled args to refer to the underlying envars to improve consistency when launching simulations. Modify the sensor bar to allow it to be positioned in the center by default, but with configurable xyz and rpy offsets
-  * Add the new run dependencies
-  * Remove the prefix's trailing underscore in the vlp16 mount to make it consistent. Fix an inconsistent envar for the sensor arch, add an arg to explicitly enable it, to stay internally consistent with the rest of Husky.
-  * Fix the envars; its just HUSKY_LMS1XX, not HUSKY_LASER_LMS1XX
-  * Revert to enabling the main laser by default in the simulations, add the velodyne_gazebo_plugins dependency
-* Add the ability to add the sensor bar with an envar without adding the realsense.  Add the sensor bar height as another arg + envar, fix the URDF when the 300mm sensorbar is enabled.
-* Contributors: Chris I-B, Ebrahim Shahrivar, vamshi konduri
-
-0.5.0 (2021-08-23)
-------------------
+* Initial Gazebo Classic changes.
+* [husky_description] Updated serial port.
+* Updates to use ros2_control.
+* Initial attempt at ros2_control.
 * Update husky.urdf.xacro (`#169 <https://github.com/husky/husky/issues/169>`_)
   Fix Failed to build tree: child link [base_laser_mount] of joint [laser_mount_joint] not found error.
   As found on https://answers.ros.org/question/354219/failed-to-build-tree-child-link-base_laser_mount-of-joint-laser_mount_joint-not-found/
-* Contributors: Guido Sanchez
+* Contributors: Guido Sanchez, Tony Baltovski
 
 0.4.4 (2020-08-13)
 ------------------
