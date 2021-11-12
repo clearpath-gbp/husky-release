@@ -2,6 +2,9 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2021-11-12)
+------------------
+
 1.0.0 (2021-11-07)
 ------------------
 * Initial Gazebo Classic changes.
