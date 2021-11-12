@@ -2,6 +2,9 @@
 Changelog for package husky_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2021-11-12)
+------------------
+
 1.0.0 (2021-11-07)
 ------------------
 * [husky_msgs] Updated husky_msgs for ROS2.
