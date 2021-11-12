@@ -2,6 +2,12 @@
 Changelog for package husky_simulator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.1 (2021-11-12)
+------------------
+* Bumped verisons of metapackages.
+* Re-enabled metapackages.
+* Contributors: Tony Baltovski
+
 0.4.4 (2020-08-13)
 ------------------
 * Removed Paul Bovbel as maintainer.
