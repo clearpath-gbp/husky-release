@@ -2,6 +2,13 @@
 Changelog for package husky_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.4.11 (2022-01-14)
+-------------------
+* Added UST10 mesh
+* Added Hokuyo UST10.
+* [husky_description] Fixed malformed STL warning for top_plate.stl.
+* Contributors: Luis Camero, Tony Baltovski
+
 0.4.10 (2021-07-18)
 -------------------
 * cpr urdf extras
