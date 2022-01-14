@@ -2,31 +2,26 @@
 Changelog for package husky_base
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.3 (2021-11-30)
-------------------
-* [husky_base] Switched Boost static assert to C++ standard library.
-* Contributors: Tony Baltovski
+0.4.11 (2022-01-14)
+-------------------
 
-1.0.2 (2021-11-16)
-------------------
-* Removed unused parameters.
-* [husky_base] Removed duplicate node in launch.
-* Contributors: Tony Baltovski
+0.4.10 (2021-07-18)
+-------------------
 
-1.0.1 (2021-11-12)
+0.4.9 (2021-07-15)
 ------------------
 
-1.0.0 (2021-11-07)
+0.4.8 (2021-04-01)
 ------------------
-* Initial Gazebo Classic changes.
-* Updates to use ros2_control.
-* [husky_base] Fixed comparison warnings.
-* [husky_base] Fixed logging variable order.
-* [husky_base] Populated hardware states and removed joints struct.
-* Initial attempt at ros2_control.
-* [husky_base] Updated horizon_legacy library for C++11.
-* [husky_base] Linting changes to horizon_legacy library.
-* Contributors: Tony Baltovski
+
+0.4.7 (2021-03-16)
+------------------
+
+0.4.6 (2021-03-09)
+------------------
+
+0.4.5 (2020-10-01)
+------------------
 
 0.4.4 (2020-08-13)
 ------------------

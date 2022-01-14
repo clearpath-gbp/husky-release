@@ -9,10 +9,6 @@
   <arg name="config_extras"
        default="$(eval optenv('HUSKY_CONFIG_EXTRAS', find('husky_control') + '/config/empty.yaml'))"/>
 
-  <arg name="laser_enabled" default="$(optenv HUSKY_LMS1XX_ENABLED false)"/>
-  <arg name="realsense_enabled" default="$(optenv HUSKY_REALSENSE_ENABLED false)"/>
-  <arg name="urdf_extras" default="$(optenv HUSKY_URDF_EXTRAS)"/>
-
   <include file="$(find multimaster_launch)/launch/multimaster_robot.launch" if="$(arg multimaster)">
     <arg name="gazebo_interface" value="$(find husky_control)/config/gazebo_interface.yaml" />
     <arg name="public_interface" value="$(find husky_control)/config/public_interface.yaml" />
@@ -22,9 +18,6 @@
 
   <!-- Load robot description -->
   <include file="$(find husky_description)/launch/description.launch" >
-    <arg name="laser_enabled" default="$(arg laser_enabled)"/>
-    <arg name="realsense_enabled" default="$(arg realsense_enabled)"/>
-    <arg name="urdf_extras" default="$(arg urdf_extras)"/>
   </include>
 
   <!-- Load controller configuration -->
@@ -33,6 +26,9 @@
   <!-- Spawn controllers -->
   <node name="base_controller_spawner" pkg="controller_manager" type="spawner"
         args="husky_joint_publisher husky_velocity_controller"/>
+  <rosparam param="wheel_radius_multiplier" ns="husky_velocity_controller" subst_value="True">
+        $(optenv HUSKY_WHEEL_MULTIPLIER 1.0)
+  </rosparam>
 
   <!-- Start EKF for localization -->
   <group if="$(arg enable_ekf)" >
@@ -41,9 +37,7 @@
     </node>
   </group>
 
-  <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen">
-    <param name="link_name" value="base_link" />
-  </node>
+  <node pkg="interactive_marker_twist_server" type="marker_server" name="twist_marker_server" output="screen"/>
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 

@@ -3,7 +3,7 @@ name: Bug Report
 about: Provide a report for that the issue is
 title: ''
 labels: bug
-assignees: tonybaltovski
+assignees: tonybaltovski, civerachb-cpr
 
 ---
 

@@ -1,9 +1,14 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 2.8.3)
 project(husky_viz)
 
-find_package(ament_cmake REQUIRED)
+find_package(catkin REQUIRED COMPONENTS roslaunch)
 
-install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
-install(DIRECTORY rviz DESTINATION share/${PROJECT_NAME})
+catkin_package()
 
-ament_package()
+roslaunch_add_file_check(launch)
+
+install(
+  DIRECTORY launch rviz
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
