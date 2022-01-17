@@ -1,0 +1,235 @@
+ros-melodic-husky-control (0.4.12-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 17 Jan 2022 05:00:00 -0000
+
+ros-melodic-husky-control (0.4.11-1bionic) bionic; urgency=high
+
+  * Overwrite 'wheel_radius_multiplier' with env. var. HUSKY_WHEEL_MULTIPLIER
+  * predict odom->base_link tf to current time
+  * Contributors: Ebrahim Shahrivar, Luis Camero
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Fri, 14 Jan 2022 05:00:00 -0000
+
+ros-melodic-husky-control (0.4.10-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Sun, 18 Jul 2021 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.9-1bionic) bionic; urgency=high
+
+  * Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
+  * Contributors: Chris Iverach-Brereton
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 15 Jul 2021 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.8-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 01 Apr 2021 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.7-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 16 Mar 2021 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.6-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 09 Mar 2021 05:00:00 -0000
+
+ros-melodic-husky-control (0.4.5-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 01 Oct 2020 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.4-1bionic) bionic; urgency=high
+
+  * clearer wording
+  * change if to unless
+  * added env var and if-statement to disable robot ekf
+  * Remove support for the Kinect for Xbox 360. We've had the deprecation warning around for a while, so let's finally do it.  Realsense support is in-place as a drop-in replacement that gets added to the top rollbar, just like the old Kinect would have.
+  * Removed Paul Bovbel as maintainer.
+  * Finish adding the simulated realsense to the topbar, add support for the physical realsense. Tidy up some parameters that were copied in last night but not yet configured.
+  * Contributors: Chris I-B, Chris Iverach-Brereton, Jose Mastrangelo, Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 13 Aug 2020 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.3-1bionic) bionic; urgency=high
+
+  * Update the udev rules to map the controllers to appropriate symlinks instead of relying on device enumeration to save us
+  * Remove the device override for the PS4 controller since we pair with bluez now (which maps the device to /dev/input/js0)
+  * Fix the filename in the launch fike
+  * Make the Logitech controller config file explicit. Add ascii-art controllers to label the axes to make configuration easier
+  * Contributors: Chris I-B, Chris Iverach-Brereton
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 20 Apr 2020 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.2-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 11 Dec 2019 05:00:00 -0000
+
+ros-melodic-husky-control (0.4.1-1bionic) bionic; urgency=high
+
+  * Added envar for joy device.
+  * Contributors: Tony Baltovski
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 30 Sep 2019 04:00:00 -0000
+
+ros-melodic-husky-control (0.4.0-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-melodic-husky-control (0.3.4-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-melodic-husky-control (0.3.3-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 18 Apr 2019 04:00:00 -0000
+
+ros-melodic-husky-control (0.3.2-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 25 Mar 2019 04:00:00 -0000
+
+ros-melodic-husky-control (0.3.1-1bionic) bionic; urgency=high
+
+  * Updated default controller to be PS4.  Can be set back to logitech (legacy) by setting HUSKY_LOGITECH environment variable
+  * Contributors: Dave Niewinski
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 02 Aug 2018 04:00:00 -0000
+
+ros-melodic-husky-control (0.3.0-1bionic) bionic; urgency=high
+
+  * Updated all package versions to 0.2.6.
+  * Made multimaster not come up by default in husky_control
+  * [husky_control] Fixed typo.
+  * Updated the rolling window size for more responsive control
+  * Fixed typo in URLs.
+  * Added dependency on husky_description to husky_control/package.xml
+  * Remove defunct email address
+  * Updated maintainers.
+  * Added more details to the config_extras workflow.
+  * Temp commit
+  * Add interface definitions
+  * Revert "Remove twist_mux config."
+    (cherry picked from commit 4ae73877d0d3b0db8e6bc6be18f0648ea310d372)
+  * Update bringup for multirobot
+  * Purge more UR; Implement urdf_extras
+  * Update URDF for multirobot
+  * Remove twist_mux config.
+  * Replace twist-mux
+  * Contributors: Administrator, Dave Niewinski, Paul Bovbel, Peiyi Chen, TheDash, Tony Baltovski
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 11 Apr 2018 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.7-1bionic) bionic; urgency=high
+
+  * Update localization.yaml
+  * Update localization.yaml
+  * Remapping the move_base topic to be compatible with cpr autonomy core.
+  * Contributors: Peiyi Chen, Tom Moore
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 31 Dec 2015 05:00:00 -0000
+
+ros-melodic-husky-control (0.2.6-1bionic) bionic; urgency=high
+
+  * Added angular_scale_turbo to teleop.config.
+  * Move interactive marker launch from teleop into control launch file
+  * Added fix for ur5 arm in gazebo
+  * Contributors: Paul Bovbel, Devon Ash, Tony Baltovski
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 08 Jul 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.5-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 16 Apr 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.4-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 13 Apr 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.3-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 08 Apr 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.2-1bionic) bionic; urgency=high
+
+  * Fix package urls
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.1-1bionic) bionic; urgency=high
+
+  * Update control params with base_link
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.2.0-1bionic) bionic; urgency=high
+
+  * Add UR5 arm simulation control config
+  * Contributors: Paul Bovbel, Devon Ash
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-melodic-husky-control (0.0.4-1bionic) bionic; urgency=high
+
+  * Namespace fixes
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 12 Feb 2015 05:00:00 -0000
+
+ros-melodic-husky-control (0.0.3-1bionic) bionic; urgency=high
+
+  * Update website
+  * Add author
+  * Get rid of chassis_link, switch to base_footprint and base_link
+  * Turn on 2d mode; future proof robot_localization parameters
+  * Refactor configuration files into modules
+  * Re-enable IMU orientation fusion
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Fri, 06 Feb 2015 05:00:00 -0000
+
+ros-melodic-husky-control (0.0.2-1bionic) bionic; urgency=high
+
+  * Use odom position for ekf
+  * Update wheel separation multiplier for slippage
+  * Restore teleop twist joy
+  * Set 2D mode, and add move_base cmd channel
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Fri, 16 Jan 2015 05:00:00 -0000
+
+ros-melodic-husky-control (0.0.1-1bionic) bionic; urgency=high
+
+  * Initial development of husky_control for Husky indigo release
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 12 Jan 2015 05:00:00 -0000
+
+
