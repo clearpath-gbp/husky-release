@@ -1,0 +1,167 @@
+ros-melodic-husky-desktop (0.4.12-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 17 Jan 2022 05:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.11-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Fri, 14 Jan 2022 05:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.10-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Sun, 18 Jul 2021 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.9-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 15 Jul 2021 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.8-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 01 Apr 2021 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.7-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 16 Mar 2021 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.6-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 09 Mar 2021 05:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.5-1bionic) bionic; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 01 Oct 2020 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.4-1bionic) bionic; urgency=high
+
+  * Removed Paul Bovbel as maintainer.
+  * Contributors: Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 13 Aug 2020 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.3-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 20 Apr 2020 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.2-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 11 Dec 2019 05:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.1-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 30 Sep 2019 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.4.0-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.3.4-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.3.3-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 18 Apr 2019 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.3.2-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 25 Mar 2019 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.3.1-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 02 Aug 2018 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.3.0-1bionic) bionic; urgency=high
+
+  * Updated all package versions to 0.2.6.
+  * Fixed typo in URLs.
+  * Remove defunct email address
+  * Updated maintainers.
+  * Move packages into monorepo for kinetic; strip out ur packages
+  * Contributors: Paul Bovbel, Tony Baltovski
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 11 Apr 2018 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.2.2-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Wed, 08 Apr 2015 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.2.1-1bionic) bionic; urgency=high
+
+  * Fix package urls
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.2.0-1bionic) bionic; urgency=high
+
+
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.1.1-1bionic) bionic; urgency=high
+
+  * Update description and docs
+  * Contributors: Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Fri, 20 Feb 2015 05:00:00 -0000
+
+ros-melodic-husky-desktop (0.1.0-1bionic) bionic; urgency=high
+
+  * Update descriptions, dependencies, and maintainer
+  * Add common message dependencies to desktop metapackage.
+  * Contributors: Mike Purvis, Paul Bovbel
+
+ -- Paul Bovbel <paul@bovbel.com>  Thu, 15 Jan 2015 05:00:00 -0000
+
+ros-melodic-husky-desktop (0.0.3-1bionic) bionic; urgency=high
+
+  * Set minimum versions of desktop packages.
+
+ -- Paul Bovbel <paul@bovbel.com>  Fri, 04 Oct 2013 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.0.2-1bionic) bionic; urgency=high
+
+  * Add husky_simulator to the desktop package.
+
+ -- Paul Bovbel <paul@bovbel.com>  Sun, 29 Sep 2013 04:00:00 -0000
+
+ros-melodic-husky-desktop (0.0.1-1bionic) bionic; urgency=high
+
+  * Metapackages for robot and desktop variants.
+
+ -- Paul Bovbel <paul@bovbel.com>  Mon, 16 Sep 2013 04:00:00 -0000
+
+
