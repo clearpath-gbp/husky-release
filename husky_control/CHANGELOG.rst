@@ -2,34 +2,30 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.12 (2022-01-17)
--------------------
-
-0.4.11 (2022-01-14)
--------------------
+0.6.1 (2022-01-18)
+------------------
 * Overwrite 'wheel_radius_multiplier' with env. var. HUSKY_WHEEL_MULTIPLIER
+* Check launch file only if testing
+  When building husky_control, husky_description, husky_navigation or
+  husky_viz without tests, CMake fails as it does not find
+  `catkin_run_tests_target` command. This patch adds conditions to fix
+  this problem.
 * predict odom->base_link tf to current time
-* Contributors: Ebrahim Shahrivar, Luis Camero
+* Contributors: Alexandre Iooss, Ebrahim Shahrivar, Luis Camero
 
-0.4.10 (2021-07-18)
--------------------
+0.6.0 (2021-09-28)
+------------------
 
-0.4.9 (2021-07-15)
+0.5.1 (2021-09-16)
 ------------------
 * Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
 * Contributors: Chris Iverach-Brereton
 
-0.4.8 (2021-04-01)
+0.5.0 (2021-08-23)
 ------------------
-
-0.4.7 (2021-03-16)
-------------------
-
-0.4.6 (2021-03-09)
-------------------
-
-0.4.5 (2020-10-01)
-------------------
+* Disabled multimaster.
+* Add the link_name parameter to fix the interactive markers in rviz
+* Contributors: Chris Iverach-Brereton, Tony Baltovski
 
 0.4.4 (2020-08-13)
 ------------------
