@@ -1,0 +1,12 @@
+Source: ros-foxy-husky-base
+Section: misc
+Priority: optional
+Maintainer: Tony Baltovski <tbaltovski@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-controller-interface, ros-foxy-controller-manager, ros-foxy-controller-manager-msgs, ros-foxy-geometry-msgs, ros-foxy-hardware-interface, ros-foxy-husky-msgs, ros-foxy-nav-msgs, ros-foxy-pluginlib, ros-foxy-rclcpp, ros-foxy-sensor-msgs, ros-foxy-std-msgs, ros-foxy-std-srvs, ros-foxy-tf2, ros-foxy-tf2-ros, ros-foxy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-husky-base
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-controller-interface, ros-foxy-controller-manager, ros-foxy-controller-manager-msgs, ros-foxy-geometry-msgs, ros-foxy-hardware-interface, ros-foxy-husky-msgs, ros-foxy-nav-msgs, ros-foxy-pluginlib, ros-foxy-rclcpp, ros-foxy-sensor-msgs, ros-foxy-std-msgs, ros-foxy-std-srvs, ros-foxy-tf2, ros-foxy-tf2-ros, ros-foxy-ros-workspace
+Description: Clearpath Husky robot driver
