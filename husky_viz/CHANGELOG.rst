@@ -2,39 +2,28 @@
 Changelog for package husky_viz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.2 (2022-02-15)
+1.0.4 (2022-03-15)
 ------------------
-* Bump CMake version to avoid CMP0048 warning.
+* Update Python launch files suffix from .launch.py to _launch.py to follow standard
+* Contributors: jyang-cpr
+
+1.0.3 (2021-11-30)
+------------------
+
+1.0.2 (2021-11-16)
+------------------
+
+1.0.1 (2021-11-12)
+------------------
+
+1.0.0 (2021-11-07)
+------------------
+* [husky_viz] Removed tests.
+* [husky_viz] Switched to depend on rviz2.
+* Removed missing packages in ROS2.
+* Updates to use ros2_control.
+* Added COLCON_IGNORE for certian packages.
 * Contributors: Tony Baltovski
-
-0.6.1 (2022-01-18)
-------------------
-* Add rqt directory to CMakeLists
-* Add rqt_gui as run_depend
-* Check launch file only if testing
-  When building husky_control, husky_description, husky_navigation or
-  husky_viz without tests, CMake fails as it does not find
-  `catkin_run_tests_target` command. This patch adds conditions to fix
-  this problem.
-* Added view_diagnostics.launch
-* Contributors: Alexandre Iooss, Luis Camero, luis-camero
-
-0.6.0 (2021-09-28)
-------------------
-
-0.5.1 (2021-09-16)
-------------------
-* Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
-* Add VLP16, secondary LMS1xx support (`#164 <https://github.com/husky/husky/issues/164>`_)
-  * Minimal refactor to add VLP16 + secondary LMS1xx support. Update defaults for the laser_enabled and realsense_enabled args to refer to the underlying envars to improve consistency when launching simulations. Modify the sensor bar to allow it to be positioned in the center by default, but with configurable xyz and rpy offsets
-  * Add the new run dependencies
-  * Remove the prefix's trailing underscore in the vlp16 mount to make it consistent. Fix an inconsistent envar for the sensor arch, add an arg to explicitly enable it, to stay internally consistent with the rest of Husky.
-  * Fix the envars; its just HUSKY_LMS1XX, not HUSKY_LASER_LMS1XX
-  * Revert to enabling the main laser by default in the simulations, add the velodyne_gazebo_plugins dependency
-* Contributors: Chris I-B
-
-0.5.0 (2021-08-23)
-------------------
 
 0.4.4 (2020-08-13)
 ------------------
