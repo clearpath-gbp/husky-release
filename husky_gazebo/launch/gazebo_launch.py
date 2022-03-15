@@ -15,6 +15,11 @@ def generate_launch_description():
 
     # Launch args
     world_path = LaunchConfiguration('world_path')
+    prefix = LaunchConfiguration('prefix')
+
+    config_husky_velocity_controller = PathJoinSubstitution(
+        [FindPackageShare("husky_control"), "config", "control.yaml"]
+    )
 
     # Get URDF via xacro
     robot_description_content = Command(
@@ -24,21 +29,32 @@ def generate_launch_description():
             PathJoinSubstitution(
                 [FindPackageShare("husky_description"), "urdf", "husky.urdf.xacro"]
             ),
-            " is_sim:=true"
+            " ",
+            "name:=husky",
+            " ",
+            "prefix:=''",
+            " ",
+            "is_sim:=true",
+            " ",
+            "gazebo_controllers:=",
+            config_husky_velocity_controller,
         ]
     )
     robot_description = {"robot_description": robot_description_content}
 
-    config_husky_velocity_controller = PathJoinSubstitution(
-        [FindPackageShare("husky_control"),
-        "config",
-        "control.yaml"],
+    node_control_manager = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[robot_description, config_husky_velocity_controller],
+        output={
+            "stdout": "screen",
+            "stderr": "screen",
+        },
     )
 
     spawn_husky_velocity_controller = Node(
         package='controller_manager',
-        executable='spawner',
-        parameters=[config_husky_velocity_controller],
+        executable='spawner.py',
         arguments=['husky_velocity_controller', '-c', '/controller_manager'],
         output='screen',
     )
@@ -52,7 +68,7 @@ def generate_launch_description():
 
     spawn_joint_state_broadcaster = Node(
         package='controller_manager',
-        executable='spawner',
+        executable='spawner.py',
         arguments=['joint_state_broadcaster', '-c', '/controller_manager'],
         output='screen',
     )
@@ -94,6 +110,7 @@ def generate_launch_description():
 
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(node_robot_state_publisher)
+    ld.add_action(node_control_manager)
     ld.add_action(spawn_joint_state_broadcaster)
     ld.add_action(diffdrive_controller_spawn_callback)
     ld.add_action(gzserver)
