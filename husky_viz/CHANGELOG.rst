@@ -2,6 +2,11 @@
 Changelog for package husky_viz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.4 (2022-03-15)
+------------------
+* Update Python launch files suffix from .launch.py to _launch.py to follow standard
+* Contributors: jyang-cpr
+
 1.0.3 (2021-11-30)
 ------------------
 
