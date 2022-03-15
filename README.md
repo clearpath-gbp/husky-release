@@ -1,3 +1,35 @@
+## husky (foxy) - 1.0.4-1
+
+The packages in the `husky` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy -t foxy husky` on `Tue, 15 Mar 2022 16:33:18 -0000`
+
+These packages were released:
+- `husky_base`
+- `husky_control`
+- `husky_description`
+- `husky_desktop`
+- `husky_gazebo`
+- `husky_msgs`
+- `husky_robot`
+- `husky_simulator`
+- `husky_viz`
+
+Version of package(s) in repository `husky`:
+
+- upstream repository: https://github.com/husky/husky.git
+- release repository: https://github.com/clearpath-gbp/husky-release.git
+- rosdistro version: `1.0.3-1`
+- old version: `1.0.3-1`
+- new version: `1.0.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## husky (noetic) - 0.6.2-1
 
 The packages in the `husky` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic -t noetic husky` on `Tue, 15 Feb 2022 22:45:12 -0000`
