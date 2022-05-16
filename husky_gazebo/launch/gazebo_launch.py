@@ -1,6 +1,7 @@
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, RegisterEventHandler
 from launch.event_handlers import OnProcessExit
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import Command, FindExecutable, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -41,16 +42,6 @@ def generate_launch_description():
         ]
     )
     robot_description = {"robot_description": robot_description_content}
-
-    node_control_manager = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[robot_description, config_husky_velocity_controller],
-        output={
-            "stdout": "screen",
-            "stderr": "screen",
-        },
-    )
 
     spawn_husky_velocity_controller = Node(
         package='controller_manager',
@@ -108,13 +99,25 @@ def generate_launch_description():
         output='screen',
     )
 
+    # Launch husky_control/control_launch.py which is just robot_localization.
+    launch_husky_control = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(PathJoinSubstitution(
+        [FindPackageShare("husky_control"), 'launch', 'control_launch.py'])))
+
+    # Launch husky_control/teleop_base_launch.py which is various ways to tele-op
+    # the robot but does not include the joystick. Also, has a twist mux.
+    launch_husky_teleop_base = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(PathJoinSubstitution(
+        [FindPackageShare("husky_control"), 'launch', 'teleop_base_launch.py'])))
+
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(node_robot_state_publisher)
-    ld.add_action(node_control_manager)
     ld.add_action(spawn_joint_state_broadcaster)
     ld.add_action(diffdrive_controller_spawn_callback)
     ld.add_action(gzserver)
     ld.add_action(gzclient)
     ld.add_action(spawn_robot)
+    ld.add_action(launch_husky_control)
+    ld.add_action(launch_husky_teleop_base)
 
     return ld
