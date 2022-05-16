@@ -2,35 +2,44 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.0.4 (2022-03-15)
+0.6.3 (2022-05-16)
 ------------------
-* Merge pull request `#191 <https://github.com/husky/husky/issues/191>`_ from StoglRobotics-forks/gazebo-sim-integration-fixes
-  Gazebo sim integration fixes
+* Enable subst_value when loading config_extras. (`#226 <https://github.com/husky/husky/issues/226>`_)
+* Remove whitespace
+* Re-add base_frame_id and velocity_rolling_window_size
+* Update DiffDriveController params
+  - Remove `estimate_velocity_from_position: false` because it does not exist as a param in `DiffDriveController`, or anywhere in `ros-controllers`
+  - Remove `base_frame_id: base_link` because the default value of `base_frame_id` is already `base_link`, as per http://wiki.ros.org/diff_drive_controller
+  - Remove `velocity_rolling_window_size: 2` so `velocity_rolling_window_size` can take on the default value of 10. A higher value reduces the amount of noise in the odometry, as per: https://docs.google.com/document/d/1x1HOtLs9Z9jfuKdtSMM_YWOrWM4p08LJVt6vQVohVWI/edit#
+* Contributors: Chris I-B, Joey Yang
+
+0.6.2 (2022-02-15)
+------------------
+* Bump CMake version to avoid CMP0048 warning.
 * Contributors: Tony Baltovski
 
-1.0.3 (2021-11-30)
+0.6.1 (2022-01-18)
+------------------
+* Overwrite 'wheel_radius_multiplier' with env. var. HUSKY_WHEEL_MULTIPLIER
+* Check launch file only if testing
+  When building husky_control, husky_description, husky_navigation or
+  husky_viz without tests, CMake fails as it does not find
+  `catkin_run_tests_target` command. This patch adds conditions to fix
+  this problem.
+* predict odom->base_link tf to current time
+* Contributors: Alexandre Iooss, Ebrahim Shahrivar, Luis Camero
+
+0.6.0 (2021-09-28)
 ------------------
 
-1.0.2 (2021-11-16)
+0.5.1 (2021-09-16)
 ------------------
-* Correct name of joint state broadcaster (controller) does not exist anymore.
-* Contributors: Denis Štogl
+* Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
+* Contributors: Chris Iverach-Brereton
 
-1.0.1 (2021-11-12)
+0.5.0 (2021-08-23)
 ------------------
-
-1.0.0 (2021-11-07)
-------------------
-* Initial Gazebo Classic changes.
-* [husky_control] Added basic localization config.
-* [husky_control] Disabled interactive_marker_twist_server for now.
-* Removed missing packages in ROS2.
-* [husky_control] Removed multimaster_launch.
-* [husky_control] Added teleop launch.
-* [husky_control] Update control rate to 10Hz.
-* Updates to use ros2_control.
-* [husky_control] Updated CMakeLists.txt.
-* Initial attempt at ros2_control.
+* Disabled multimaster.
 * Add the link_name parameter to fix the interactive markers in rviz
 * Contributors: Chris Iverach-Brereton, Tony Baltovski
 
