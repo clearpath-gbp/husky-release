@@ -2,6 +2,9 @@
 Changelog for package husky_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2022-05-18)
+------------------
+
 1.0.5 (2022-05-05)
 ------------------
 * Uncomment dependency on husky_bringup
