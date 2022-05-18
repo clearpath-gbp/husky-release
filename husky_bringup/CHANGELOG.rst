@@ -2,6 +2,9 @@
 Changelog for package husky_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.6 (2022-05-18)
+------------------
+
 1.0.5 (2022-05-05)
 ------------------
 * Updated package versions for un-released packages.
