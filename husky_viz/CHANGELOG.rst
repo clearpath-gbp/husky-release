@@ -2,6 +2,11 @@
 Changelog for package husky_viz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.0.7 (2022-05-19)
+------------------
+* Renamed all launch files to *.launch.py.
+* Contributors: Tony Baltovski
+
 1.0.6 (2022-05-18)
 ------------------
 
