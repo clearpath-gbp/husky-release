@@ -1,32 +1,17 @@
 name: husky_ci
 
-on: 
-  push:
-    braches: [foxy-devel]
-    pull_request: [foxy-devel]
-  schedule:
-    - cron: '0 4 * * *' # every day at 4 AM (UTC)
+on: [push, pull_request]
 
 jobs:
-  husky_foxy_testing_ci:
-    name: Foxy Testing
+  husky_noetic_ci:
+    name: Noetic
     strategy:
       matrix:
         env:
-          - {ROS_DISTRO: foxy, ROS_REPO: testing}
+          - {ROS_DISTRO: noetic, ROS_REPO: main}
+          - {ROS_DISTRO: noetic, ROS_REPO: testing}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: 'ros-industrial/industrial_ci@master'
-        env: ${{matrix.env}}
-  husky_foxy_main_ci:
-    name: Foxy Main
-    strategy:
-      matrix:
-        env:
-          - {ROS_DISTRO: foxy, ROS_REPO: main}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - uses: 'ros-industrial/industrial_ci@master'
         env: ${{matrix.env}}
