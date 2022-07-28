@@ -1,3 +1,34 @@
+## husky (noetic) - 0.6.4-4
+
+The packages in the `husky` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic -t noetic husky` on `Thu, 28 Jul 2022 14:22:33 -0000`
+
+These packages were released:
+- `husky_control`
+- `husky_description`
+- `husky_desktop`
+- `husky_gazebo`
+- `husky_msgs`
+- `husky_navigation`
+- `husky_simulator`
+- `husky_viz`
+
+Version of package(s) in repository `husky`:
+
+- upstream repository: https://github.com/husky/husky.git
+- release repository: https://github.com/clearpath-gbp/husky-release.git
+- rosdistro version: `0.6.4-2`
+- old version: `0.6.4-3`
+- new version: `0.6.4-4`
+
+Versions of tools used:
+
+- bloom version: `0.11.1`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## husky (noetic) - 0.6.4-3
 
 The packages in the `husky` repository were released into the `noetic` distro by running `/usr/bin/bloom-release -r noetic -t noetic husky` on `Wed, 27 Jul 2022 22:17:47 -0000`
