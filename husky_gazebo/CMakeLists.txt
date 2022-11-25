@@ -1,30 +1,13 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 2.8.3)
 project(husky_gazebo)
 
-find_package(catkin REQUIRED COMPONENTS)
+find_package(catkin REQUIRED COMPONENTS roslaunch)
 
 catkin_package()
 
+roslaunch_add_file_check(launch)
 
 install(
-  DIRECTORY worlds
+  DIRECTORY launch worlds
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
-
-install(
-  FILES launch/husky_empty_world.launch
-        launch/husky_playpen.launch
-        launch/playpen.launch
-        launch/realsense.launch
-        launch/spawn_husky.launch
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
-
-if (CATKIN_ENABLE_TESTING)
-  find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(launch/husky_empty_world.launch)
-  roslaunch_add_file_check(launch/husky_playpen.launch)
-  roslaunch_add_file_check(launch/playpen.launch)
-  roslaunch_add_file_check(launch/realsense.launch)
-  roslaunch_add_file_check(launch/spawn_husky.launch)
-endif()

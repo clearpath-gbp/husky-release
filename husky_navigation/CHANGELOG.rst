@@ -2,40 +2,36 @@
 Changelog for package husky_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.5 (2022-11-25)
-------------------
+0.4.13 (2022-11-25)
+-------------------
 * Fixed all scan topics to use front/scan.
-* [husky_navigation] Updated DWAPlannerROS to use non-deprecated parameters.
 * Contributors: Tony Baltovski
 
-0.6.4 (2022-06-16)
+0.4.12 (2022-01-17)
+-------------------
+
+0.4.11 (2022-01-14)
+-------------------
+
+0.4.10 (2021-07-18)
+-------------------
+
+0.4.9 (2021-07-15)
 ------------------
 
-0.6.3 (2022-05-16)
+0.4.8 (2021-04-01)
 ------------------
 
-0.6.2 (2022-02-15)
-------------------
-* Bump CMake version to avoid CMP0048 warning.
-* Contributors: Tony Baltovski
-
-0.6.1 (2022-01-18)
-------------------
-* Check launch file only if testing
-  When building husky_control, husky_description, husky_navigation or
-  husky_viz without tests, CMake fails as it does not find
-  `catkin_run_tests_target` command. This patch adds conditions to fix
-  this problem.
-* Contributors: Alexandre Iooss
-
-0.6.0 (2021-09-28)
+0.4.7 (2021-03-16)
 ------------------
 
-0.5.1 (2021-09-16)
+0.4.6 (2021-03-09)
 ------------------
 
-0.5.0 (2021-08-23)
+0.4.5 (2020-10-01)
 ------------------
+* Expose the scan_topic argument in amcl_demo and gmapping_demo, make them use the HUSKY_LASER_TOPIC env var as their default
+* Contributors: Chris Iverach-Brereton
 
 0.4.4 (2020-08-13)
 ------------------

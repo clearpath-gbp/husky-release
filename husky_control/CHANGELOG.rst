@@ -2,97 +2,42 @@
 Changelog for package husky_control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.6.5 (2022-11-25)
-------------------
+0.4.13 (2022-11-25)
+-------------------
 * Fixed all scan topics to use front/scan.
-* Disable keyboard input by default; on a normal robot this is launched by the systemd job, where there will never be any keyboard input.
-* Separate the keyboard teleop to a separate topic, add the new topic to the twist_mux
-* Move the keyboard teleop launch into the main teleop file, add an arg to optionally disable it
-* Update package.xml
-* Update CHANGELOG.rst
-* Update CMakeLists.txt
-* Update package.xml
-* Update CHANGELOG.rst
-* Update teleop_keyboard.launch
-* Update CMakeLists.txt
-* Remove scripts
-* Update CHANGELOG.rst
-* Update teleop_keyboard.launch
-* Create teleop_keyboard.launch
-* Update CMakeLists.txt
-* Update CMakeLists.txt
-* Update CMakeLists.txt
-* Update package.xml
-* Update package.xml
-* Update package.xml
-* Update package.xml
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Update teleop_keyboard.py
-* Create teleop_keyboard.py
-* Update LICENSE
-* Create LICENSE
-* Contributors: Chris Iverach-Brereton, Tinker Twins, Tony Baltovski
-
-0.6.4 (2022-06-16)
-------------------
-
-0.6.3 (2022-05-16)
-------------------
-* Enable subst_value when loading config_extras. (`#226 <https://github.com/husky/husky/issues/226>`_)
 * Remove whitespace
-* Re-add base_frame_id and velocity_rolling_window_size
-* Update DiffDriveController params
-  - Remove `estimate_velocity_from_position: false` because it does not exist as a param in `DiffDriveController`, or anywhere in `ros-controllers`
-  - Remove `base_frame_id: base_link` because the default value of `base_frame_id` is already `base_link`, as per http://wiki.ros.org/diff_drive_controller
-  - Remove `velocity_rolling_window_size: 2` so `velocity_rolling_window_size` can take on the default value of 10. A higher value reduces the amount of noise in the odometry, as per: https://docs.google.com/document/d/1x1HOtLs9Z9jfuKdtSMM_YWOrWM4p08LJVt6vQVohVWI/edit#
-* Contributors: Chris I-B, Joey Yang
+* Merge pull request `#217 <https://github.com/husky/husky/issues/217>`_ from husky/jyang-cpr-patch-1
+  Update DiffDriveController params
+* Contributors: Joey Yang, Tony Baltovski
 
-0.6.2 (2022-02-15)
-------------------
-* Bump CMake version to avoid CMP0048 warning.
-* Contributors: Tony Baltovski
+0.4.12 (2022-01-17)
+-------------------
 
-0.6.1 (2022-01-18)
-------------------
+0.4.11 (2022-01-14)
+-------------------
 * Overwrite 'wheel_radius_multiplier' with env. var. HUSKY_WHEEL_MULTIPLIER
-* Check launch file only if testing
-  When building husky_control, husky_description, husky_navigation or
-  husky_viz without tests, CMake fails as it does not find
-  `catkin_run_tests_target` command. This patch adds conditions to fix
-  this problem.
 * predict odom->base_link tf to current time
-* Contributors: Alexandre Iooss, Ebrahim Shahrivar, Luis Camero
+* Contributors: Ebrahim Shahrivar, Luis Camero
 
-0.6.0 (2021-09-28)
-------------------
+0.4.10 (2021-07-18)
+-------------------
 
-0.5.1 (2021-09-16)
+0.4.9 (2021-07-15)
 ------------------
 * Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
 * Contributors: Chris Iverach-Brereton
 
-0.5.0 (2021-08-23)
+0.4.8 (2021-04-01)
 ------------------
-* Disabled multimaster.
-* Add the link_name parameter to fix the interactive markers in rviz
-* Contributors: Chris Iverach-Brereton, Tony Baltovski
+
+0.4.7 (2021-03-16)
+------------------
+
+0.4.6 (2021-03-09)
+------------------
+
+0.4.5 (2020-10-01)
+------------------
 
 0.4.4 (2020-08-13)
 ------------------
