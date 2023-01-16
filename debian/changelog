@@ -1,0 +1,213 @@
+ros-noetic-husky-viz (0.6.6-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 16 Jan 2023 05:00:00 -0000
+
+ros-noetic-husky-viz (0.6.5-3focal) focal; urgency=high
+
+  * Fixed all scan topics to use front/scan.
+  * Contributors: Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Fri, 25 Nov 2022 05:00:00 -0000
+
+ros-noetic-husky-viz (0.6.4-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 16 Jun 2022 04:00:00 -0000
+
+ros-noetic-husky-viz (0.6.3-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 16 May 2022 04:00:00 -0000
+
+ros-noetic-husky-viz (0.6.2-3focal) focal; urgency=high
+
+  * Bump CMake version to avoid CMP0048 warning.
+  * Contributors: Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 15 Feb 2022 05:00:00 -0000
+
+ros-noetic-husky-viz (0.6.1-3focal) focal; urgency=high
+
+  * Add rqt directory to CMakeLists
+  * Add rqt_gui as run_depend
+  * Check launch file only if testing
+    When building husky_control, husky_description, husky_navigation or
+    husky_viz without tests, CMake fails as it does not find
+    catkin_run_tests_target command. This patch adds conditions to fix
+    this problem.
+  * Added view_diagnostics.launch
+  * Contributors: Alexandre Iooss, Luis Camero, luis-camero
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 18 Jan 2022 05:00:00 -0000
+
+ros-noetic-husky-viz (0.6.0-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Tue, 28 Sep 2021 04:00:00 -0000
+
+ros-noetic-husky-viz (0.5.1-3focal) focal; urgency=high
+
+  * Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
+  * Add VLP16, secondary LMS1xx support (#164 <https://github.com/husky/husky/issues/164>)
+    * Minimal refactor to add VLP16 + secondary LMS1xx support. Update defaults for the laser_enabled and realsense_enabled args to refer to the underlying envars to improve consistency when launching simulations. Modify the sensor bar to allow it to be positioned in the center by default, but with configurable xyz and rpy offsets
+    * Add the new run dependencies
+    * Remove the prefix's trailing underscore in the vlp16 mount to make it consistent. Fix an inconsistent envar for the sensor arch, add an arg to explicitly enable it, to stay internally consistent with the rest of Husky.
+    * Fix the envars; its just HUSKY_LMS1XX, not HUSKY_LASER_LMS1XX
+    * Revert to enabling the main laser by default in the simulations, add the velodyne_gazebo_plugins dependency
+  * Contributors: Chris I-B
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 16 Sep 2021 04:00:00 -0000
+
+ros-noetic-husky-viz (0.5.0-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 23 Aug 2021 04:00:00 -0000
+
+ros-noetic-husky-viz (0.4.4-3focal) focal; urgency=high
+
+  * Remove support for the Kinect for Xbox 360. We've had the deprecation warning around for a while, so let's finally do it.  Realsense support is in-place as a drop-in replacement that gets added to the top rollbar, just like the old Kinect would have.
+  * Removed Paul Bovbel as maintainer.
+  * Mark the Kinect for Xbox 360 as deprecated, start adding support for the Intel Realsense D400 series as a replacement
+  * Contributors: Chris I-B, Chris Iverach-Brereton, Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 13 Aug 2020 04:00:00 -0000
+
+ros-noetic-husky-viz (0.4.3-3focal) focal; urgency=high
+
+  * [husky_viz] Removed joint_state_publisher since joint_state_publisher_gui is generating the same data.
+  * Fix a deprecation warning about the joint state publisher's gui
+  * Contributors: Chris Iverach-Brereton, Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 20 Apr 2020 04:00:00 -0000
+
+ros-noetic-husky-viz (0.4.2-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Wed, 11 Dec 2019 05:00:00 -0000
+
+ros-noetic-husky-viz (0.4.1-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 30 Sep 2019 04:00:00 -0000
+
+ros-noetic-husky-viz (0.4.0-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-noetic-husky-viz (0.3.4-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 01 Aug 2019 04:00:00 -0000
+
+ros-noetic-husky-viz (0.3.3-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 18 Apr 2019 04:00:00 -0000
+
+ros-noetic-husky-viz (0.3.2-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 25 Mar 2019 04:00:00 -0000
+
+ros-noetic-husky-viz (0.3.1-3focal) focal; urgency=high
+
+  * Updated dependencies for robot_state_publisher
+  * Updated view_model.launch to include a robot_state_publisher since it was moved to control.launch
+  * Contributors: Dave Niewinski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Thu, 02 Aug 2018 04:00:00 -0000
+
+ros-noetic-husky-viz (0.3.0-3focal) focal; urgency=high
+
+  * Updated all package versions to 0.2.6.
+  * Fixed typo in URLs.
+  * Remove defunct email address
+  * Updated maintainers.
+  * Update URDF for multirobot
+  * Move packages into monorepo for kinetic; strip out ur packages
+  * Contributors: Paul Bovbel, Tony Baltovski
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Wed, 11 Apr 2018 04:00:00 -0000
+
+ros-noetic-husky-viz (0.2.2-3focal) focal; urgency=high
+
+  * Toggle viz settings
+  * Integrate husky_customization workflow
+  * Contributors: Paul Bovbel
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Wed, 08 Apr 2015 04:00:00 -0000
+
+ros-noetic-husky-viz (0.2.1-3focal) focal; urgency=high
+
+  * Update robot visualization
+  * Enable arm visualization by default
+  * Fix package urls
+  * Contributors: Paul Bovbel
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-noetic-husky-viz (0.2.0-3focal) focal; urgency=high
+
+
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Mon, 23 Mar 2015 04:00:00 -0000
+
+ros-noetic-husky-viz (0.1.1-3focal) focal; urgency=high
+
+  * Update authors and web
+  * Add IMU viz dependency; Update rviz presets
+  * Restore interactive marker
+  * Contributors: Paul Bovbel
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Fri, 06 Feb 2015 05:00:00 -0000
+
+ros-noetic-husky-viz (0.1.0-3focal) focal; urgency=high
+
+  * Update visualizations for indigo release
+  * update maintainer and dependencies
+  * Remove husky_interactive_markers, switch to generic.
+  * Add front_laser arg to view_model launcher.
+  * Default fixed frame for the model viewer should be base_link.
+  * viewing more options for navigation.rviz
+  * Contributors: Mike Purvis, Paul Bovbel, Prasenjit Mukherjee
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Wed, 14 Jan 2015 05:00:00 -0000
+
+ros-noetic-husky-viz (0.0.3-3focal) focal; urgency=high
+
+  * Set version requirement for description pkg.
+  * Navigation view launch file and rviz file
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Fri, 04 Oct 2013 04:00:00 -0000
+
+ros-noetic-husky-viz (0.0.2-3focal) focal; urgency=high
+
+  * Add interactive_markers pkg to dependencies.
+  * Add rviz files and launch files for view_robot (odom view + interactive marker control)
+  * Add roslaunch file check.
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Sun, 29 Sep 2013 04:00:00 -0000
+
+ros-noetic-husky-viz (0.0.1-3focal) focal; urgency=high
+
+  * Working view_model.launch.
+  * Catkinize package, add install targets.
+  * Split off separate husky_viz package.
+  * Move models directory up to root
+
+ -- Tony Baltovski <tbaltovski@clearpathrobotics.com>  Wed, 11 Sep 2013 04:00:00 -0000
+
+
