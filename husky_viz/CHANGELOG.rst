@@ -2,37 +2,43 @@
 Changelog for package husky_viz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.13 (2022-11-25)
--------------------
+0.6.6 (2023-01-16)
+------------------
+
+0.6.5 (2022-11-25)
+------------------
 * Fixed all scan topics to use front/scan.
 * Contributors: Tony Baltovski
 
-0.4.12 (2022-01-17)
--------------------
-* Added view_diagnostics
-* Add rqt directory
-* Added rqt_gui dependencies
-* Contributors: Luis Camero, luis-camero
+0.6.4 (2022-06-16)
+------------------
 
-0.4.11 (2022-01-14)
--------------------
+0.6.3 (2022-05-16)
+------------------
 
-0.4.10 (2021-07-18)
--------------------
+0.6.2 (2022-02-15)
+------------------
+* Bump CMake version to avoid CMP0048 warning.
+* Contributors: Tony Baltovski
 
-0.4.9 (2021-07-15)
+0.6.1 (2022-01-18)
+------------------
+* Add rqt directory to CMakeLists
+* Add rqt_gui as run_depend
+* Check launch file only if testing
+  When building husky_control, husky_description, husky_navigation or
+  husky_viz without tests, CMake fails as it does not find
+  `catkin_run_tests_target` command. This patch adds conditions to fix
+  this problem.
+* Added view_diagnostics.launch
+* Contributors: Alexandre Iooss, Luis Camero, luis-camero
+
+0.6.0 (2021-09-28)
+------------------
+
+0.5.1 (2021-09-16)
 ------------------
 * Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
-* Contributors: Chris Iverach-Brereton
-
-0.4.8 (2021-04-01)
-------------------
-
-0.4.7 (2021-03-16)
-------------------
-
-0.4.6 (2021-03-09)
-------------------
 * Add VLP16, secondary LMS1xx support (`#164 <https://github.com/husky/husky/issues/164>`_)
   * Minimal refactor to add VLP16 + secondary LMS1xx support. Update defaults for the laser_enabled and realsense_enabled args to refer to the underlying envars to improve consistency when launching simulations. Modify the sensor bar to allow it to be positioned in the center by default, but with configurable xyz and rpy offsets
   * Add the new run dependencies
@@ -41,7 +47,7 @@ Changelog for package husky_viz
   * Revert to enabling the main laser by default in the simulations, add the velodyne_gazebo_plugins dependency
 * Contributors: Chris I-B
 
-0.4.5 (2020-10-01)
+0.5.0 (2021-08-23)
 ------------------
 
 0.4.4 (2020-08-13)

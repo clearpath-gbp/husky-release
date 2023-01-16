@@ -2,43 +2,82 @@
 Changelog for package husky_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.4.13 (2022-11-25)
--------------------
+0.6.6 (2023-01-16)
+------------------
+
+0.6.5 (2022-11-25)
+------------------
+* Removed old bracket
+* Updated brackets
+* Change the reference heading of the GPS plugin to be east so the coordinate system is ENU
+* Rename DATUM\_* to GAZEBO_WORLD\_*. We're separating the datum from the world's origin, and this keeps envars from clobbering each other
+* LMS1XX Tower EnvVar (`#250 <https://github.com/husky/husky/issues/250>`_)
+  * Added second velodyne description
+  * Added environment variable to remove the LMS1XX mount
+  * Removed console output
+* Use DATUM_LAT and DATUM_LON envars to override the default reference lat/lon for the Gazebo GPS plugin. This addresses a compatibility issue with outdoor nav simulations
+* Contributors: Chris Iverach-Brereton, Luis Camero, luis-camero
+
+0.6.4 (2022-06-16)
+------------------
+* Fixes for velodyne prefix
+* PACS Brackets (`#238 <https://github.com/husky/husky/issues/238>`_)
+  * Added STL models for brackets
+  * Added brackets to URDF
+  * Added bracket environment variables
+* Fixed issues with find
+* Added README with all Environment Variables
+* Duplicate URDF for every standard sensor
+* Added fath pivot mount as dependency
+* Added URDF of Blackfly on top of fath_pivot_mount
+* Added prefix to name parameter to differentiate between primary and secondary
+* Changed ENABLE to ENABLED
+* Changed HUSKY_FULL_RISER to HUSKY_FULL_RISER_LEVEL
+* Added PACS top plate and mounts to decorations
+* Added PACS urdf definitions
+* Added PACS meshes
+* Contributors: Luis Camero, luis-camero
+
+0.6.3 (2022-05-16)
+------------------
+* Added Blackfly
+* Added blackfly description dependancy
+* Realsense will no longer add the Sensor Arch (`#220 <https://github.com/husky/husky/issues/220>`_)
+  * Add parent link env-var to imu
+  * Sensor Arch is only enabled by HUSKY_SENSOR_ARCH, changed default realsense mount frame to
+* Contributors: Luis Camero, luis-camero
+
+0.6.2 (2022-02-15)
+------------------
 * Added Wibotic mesh and STL
-* Contributors: Luis Camero
-
-0.4.12 (2022-01-17)
--------------------
-
-0.4.11 (2022-01-14)
--------------------
-* Added UST10 mesh
-* Added Hokuyo UST10.
-* [husky_description] Fixed malformed STL warning for top_plate.stl.
+* Bump CMake version to avoid CMP0048 warning.
 * Contributors: Luis Camero, Tony Baltovski
 
-0.4.10 (2021-07-18)
--------------------
-* cpr urdf extras
-* Contributors: Ebrahim Shahrivar
-
-0.4.9 (2021-07-15)
+0.6.1 (2022-01-18)
 ------------------
+* Fixed error in URDF
+* Added Hokuyo
+* Check launch file only if testing
+  When building husky_control, husky_description, husky_navigation or
+  husky_viz without tests, CMake fails as it does not find
+  `catkin_run_tests_target` command. This patch adds conditions to fix
+  this problem.
+* Revert changes to mount_base_link to preserve use of origin argument; instead, simply created an additional plate link that sits between the supports and VLP16
+* Create visual geometry of vlp16_mount_base_link
+* Update mount support dimensions and spacing to better represent real-world measurements
+* [husky_description] Fixed malformed STL warning for top_plate.stl.
+* Contributors: Alexandre Iooss, Luis Camero, Tony Baltovski, jyang-cpr
+
+0.6.0 (2021-09-28)
+------------------
+
+0.5.1 (2021-09-16)
+------------------
+* cpr urdf extras
 * Remove the need to explicitly specify the laser_enabled, realsense_enabled, and urdf_extras arguments; use the envars to make it easier to simulate customized robots & use the moveit setup assistant.
 * Update intel_realsense.urdf.xacro
   modify image format in sim to avoid log warn spam
-* Contributors: Chris Iverach-Brereton, vamshi konduri
-
-0.4.8 (2021-04-01)
-------------------
-
-0.4.7 (2021-03-16)
-------------------
 * Add HUSKY\_{FRONT|REAR}_BUMPER envars we can use to completely turn off the front & rear bumpers.  This is requested to make integration of the wireless charging docks easier
-* Contributors: Chris Iverach-Brereton
-
-0.4.6 (2021-03-09)
-------------------
 * Add VLP16, secondary LMS1xx support (`#164 <https://github.com/husky/husky/issues/164>`_)
   * Minimal refactor to add VLP16 + secondary LMS1xx support. Update defaults for the laser_enabled and realsense_enabled args to refer to the underlying envars to improve consistency when launching simulations. Modify the sensor bar to allow it to be positioned in the center by default, but with configurable xyz and rpy offsets
   * Add the new run dependencies
@@ -46,10 +85,14 @@ Changelog for package husky_description
   * Fix the envars; its just HUSKY_LMS1XX, not HUSKY_LASER_LMS1XX
   * Revert to enabling the main laser by default in the simulations, add the velodyne_gazebo_plugins dependency
 * Add the ability to add the sensor bar with an envar without adding the realsense.  Add the sensor bar height as another arg + envar, fix the URDF when the 300mm sensorbar is enabled.
-* Contributors: Chris I-B, Chris Iverach-Brereton
+* Contributors: Chris I-B, Ebrahim Shahrivar, vamshi konduri
 
-0.4.5 (2020-10-01)
+0.5.0 (2021-08-23)
 ------------------
+* Update husky.urdf.xacro (`#169 <https://github.com/husky/husky/issues/169>`_)
+  Fix Failed to build tree: child link [base_laser_mount] of joint [laser_mount_joint] not found error.
+  As found on https://answers.ros.org/question/354219/failed-to-build-tree-child-link-base_laser_mount-of-joint-laser_mount_joint-not-found/
+* Contributors: Guido Sanchez
 
 0.4.4 (2020-08-13)
 ------------------
