@@ -2,6 +2,12 @@
 Changelog for package husky_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.7 (2023-03-10)
+------------------
+* Add a scan_topic argument to the gmapping_demo
+  This just exposes the gmapping.launch file's argument to the gmapping_demo.launch to make it easier to use non-standard topics.
+* Contributors: Chris Iverach-Brereton
+
 0.6.6 (2023-01-16)
 ------------------
 
