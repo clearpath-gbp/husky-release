@@ -1,15 +1,12 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.5)
 project(husky_control)
 
-find_package(catkin REQUIRED)
 
-catkin_package()
+find_package(ament_cmake REQUIRED)
 
-if (CATKIN_ENABLE_TESTING)
-  find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(launch)
-endif()
 
 install(DIRECTORY config launch
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+  DESTINATION share/${PROJECT_NAME}
 )
+
+ament_package()
