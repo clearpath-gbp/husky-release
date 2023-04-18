@@ -1,0 +1,12 @@
+Source: ros-foxy-husky-bringup
+Section: misc
+Priority: optional
+Maintainer: Tony Baltovski <tbaltovski@clearpathrobotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-ros-workspace
+Homepage: http://ros.org/wiki/husky_bringup
+Standards-Version: 3.9.2
+
+Package: ros-foxy-husky-bringup
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-husky-base, ros-foxy-husky-control, ros-foxy-husky-description, ros-foxy-microstrain-inertial-driver, ros-foxy-realsense2-camera, ros-foxy-robot-upstart, ros-foxy-urg-node, ros-foxy-velodyne-driver, ros-foxy-velodyne-pointcloud, ros-foxy-ros-workspace
+Description: Clearpath Husky installation and integration package
