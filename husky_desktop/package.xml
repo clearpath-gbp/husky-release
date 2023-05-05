@@ -1,19 +1,22 @@
 <?xml version="1.0"?>
-<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
-<package format="3">
+<package>
   <name>husky_desktop</name>
-  <version>1.0.9</version>
+  <version>0.6.8</version>
   <description>Metapackage for Clearpath Husky visualization software</description>
-  <author email="paul@bovbel.com">Paul Bovbel</author>
+
   <maintainer email="tbaltovski@clearpathrobotics.com">Tony Baltovski</maintainer>
+
   <license>BSD</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <url type="website">http://ros.org/wiki/husky_desktop</url>
+  <url type="bugtracker">https://github.com/husky/husky_desktop/issues</url>
+  <url type="repository">https://github.com/husky/husky_desktop</url>
 
-  <exec_depend>husky_msgs</exec_depend>
-  <exec_depend>husky_viz</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>husky_viz</run_depend>
+  <run_depend>husky_msgs</run_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <metapackage/>
   </export>
 </package>

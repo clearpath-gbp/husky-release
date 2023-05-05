@@ -1,8 +1,6 @@
 husky
 =====
 
-:warning: **Upgrading to ROS2 may not have the same functionally as ROS**: Contact support at support@clearpathrobotics.com.
-
 Common ROS packages for the Clearpath Husky, useable for both simulation and
 real robot operation.
 
@@ -21,16 +19,6 @@ husky_desktop
 Desktop ROS packages for the Clearpath Husky, which may pull in graphical dependencies.
 
  - husky_viz : Visualization (rviz) configuration and bringup
-
-For Husky instructions and tutorials, please see http://wiki.ros.org/Robots/Husky
-
-husky_robot
-===========
-
-Robot ROS packages for the Clearpath Husky, for operating robot hardware.
-
- - husky_bringup : Bringup launch files and scripts.
- - husky_base : Hardware driver for communicating with the onboard MCU.
 
 For Husky instructions and tutorials, please see http://wiki.ros.org/Robots/Husky
 
