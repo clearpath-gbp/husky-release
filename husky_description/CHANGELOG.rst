@@ -2,6 +2,11 @@
 Changelog for package husky_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.6.8 (2023-05-04)
+------------------
+* Only Included Realsense if Enabled
+* Contributors: Luis Camero
+
 0.6.7 (2023-03-10)
 ------------------
 * Fixed Realsense URDF
